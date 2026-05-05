@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(56, 189, 248, 0.2), transparent 30%),
+    radial-gradient(circle at 90% 15%, rgba(167, 139, 250, 0.16), transparent 35%),
+    linear-gradient(180deg, #020617 0%, #030712 100%);
+}
+
+section {
+  scroll-margin-top: 6rem;
+}
+
+.glass {
+  @apply border border-white/10 bg-white/[0.045] backdrop-blur-lg shadow-[0_18px_60px_-40px_rgba(56,189,248,0.45)];
+}
+
+.soft-grid {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.snap-shell {
+  scroll-snap-type: y proximity;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+}
+
+a,
+button {
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    opacity 180ms ease;
+}
+
+.interactive-lift {
+  @apply transition-transform duration-200 hover:-translate-y-1;
+}
