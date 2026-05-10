@@ -30,9 +30,23 @@ const navItems = [
 
 const projects = [
   {
+    title: "KAIRO — Real-Time Job Monitor",
+    stack: ["Next.js", "PostgreSQL", "Telegram Bot", "Vercel"],
+    link: "https://github.com/ridhwankhan/kairo",
+    liveLink: "https://kairo-job.vercel.app",
+    statement: "Job seekers waste hours manually checking dozens of career portals for new listings.",
+    problem:
+      "There was no unified, automated system that could scrape multiple job boards, deduplicate results, and deliver real-time alerts to users personally.",
+    solution:
+      "Built KAIRO — a full-stack, real-time job monitoring platform with automated scrapers, a PostgreSQL-backed deduplication engine, per-user Telegram bot notifications, and a live dashboard for tracking opportunities across portals.",
+    outcome:
+      "Deployed a production-grade SaaS-style platform on Vercel that actively monitors job listings 24/7 and pushes instant alerts to registered users via Telegram."
+  },
+  {
     title: "ZERO Trust Banking System",
     stack: ["Django", "React", "Cryptography"],
     link: "https://github.com/ridhwankhan/ZERO-trust-Banking-system",
+    liveLink: null,
     statement: "Banks need stronger trust boundaries without slowing down user actions.",
     problem:
       "Traditional security layers were not enough for sensitive financial workflows and peer-to-peer transactions.",
@@ -45,6 +59,7 @@ const projects = [
     title: "Multimodal ML Framework",
     stack: ["Python", "ML", "Data Engineering"],
     link: null,
+    liveLink: null,
     statement: "Land-use planning often relies on fragmented data and guesswork.",
     problem:
       "Geospatial, climate, and socio-economic signals were spread across different formats and hard to combine.",
@@ -57,6 +72,7 @@ const projects = [
     title: "Meta-Visual Deepfake Forensics",
     stack: ["Deep Learning", "CV", "NLP"],
     link: null,
+    liveLink: null,
     statement: "Deepfake detection fails when models depend on only one signal type.",
     problem:
       "Visual-only detectors were easier to bypass on tougher manipulated media samples.",
@@ -69,6 +85,7 @@ const projects = [
     title: "Techie Tokor E-Commerce",
     stack: ["PHP", "MySQL"],
     link: "https://github.com/ridhwankhan/CSE370-Project",
+    liveLink: null,
     statement: "Small online stores need reliable shopping flows without heavy infrastructure.",
     problem:
       "Basic storefront implementations struggled with auth, product handling, and scalable order flow.",
@@ -81,6 +98,7 @@ const projects = [
     title: "Server Automation & ETL Utility",
     stack: ["Bash", "Linux", "Cron"],
     link: "https://github.com/ridhwankhan/Linux-Shell-Scripting",
+    liveLink: null,
     statement: "Manual server tasks create delays and increase operation mistakes.",
     problem:
       "Backups and data pulls were repetitive, error-prone, and inconsistent across schedules.",
@@ -93,6 +111,7 @@ const projects = [
     title: "Quadcopter Flight Controller",
     stack: ["C++", "Arduino", "Embedded"],
     link: "https://github.com/ridhwankhan/Arduino-flight-controller",
+    liveLink: null,
     statement: "Stable flight requires fast control loops and accurate sensor handling.",
     problem:
       "Without tuned feedback control, the quadcopter drifted and became unstable under movement.",
@@ -390,24 +409,24 @@ export default function Home() {
               viewport={{ once: true, amount: 0.45 }}
               transition={{ duration: 0.65 }}
             >
-              <h2 className="text-2xl font-semibold md:text-3xl">About</h2>
+              <h2 className="text-2xl font-semibold md:text-3xl">About Me</h2>
               <div className="mt-5 space-y-4 text-slate-300">
-                <p>I am a Computer Science student in my final semester.</p>
                 <p>
-                  I enjoy building practical software that people can actually use in everyday
-                  life.
+                  I am a Computer Science graduate (May 2026) from BRAC University with a strong
+                  foundation in software engineering, data analytics, and business intelligence.
                 </p>
                 <p>
-                  I&apos;m especially drawn to AI, data, business intelligence, and solving
-                  real-world problems in simple ways.
+                  My work sits at the intersection of technology and strategy — I build data-driven
+                  systems that solve real operational problems, not just technical exercises.
                 </p>
                 <p>
-                  Most of what I learn comes from building projects, making mistakes, and improving
-                  step by step.
+                  I am particularly drawn to roles in data analytics, operations management, and
+                  corporate leadership tracks, where I can translate technical insight into
+                  measurable business outcomes.
                 </p>
                 <p>
-                  I am also interested in leadership and corporate roles where technology and
-                  strategy meet.
+                  I thrive in cross-functional environments and bring both the analytical rigour of
+                  an engineer and the communication clarity of a business thinker.
                 </p>
               </div>
             </motion.div>
@@ -552,17 +571,34 @@ export default function Home() {
                 View Case Study
                 <ArrowRight size={14} />
               </button>
-              {project.link && (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="interactive-lift mt-3 inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-4 py-2 text-xs font-medium text-cyan-100 hover:bg-cyan-400/15"
-                >
-                  Open Project Link
-                  <ExternalLink size={13} />
-                </a>
-              )}
+              <div className="mt-3 flex flex-wrap gap-2">
+                {project.liveLink && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="interactive-lift inline-flex items-center gap-2 rounded-full border border-emerald-300/40 bg-emerald-400/15 px-4 py-2 text-xs font-semibold text-emerald-100 shadow-[0_0_20px_-6px_rgba(52,211,153,0.6)] hover:bg-emerald-400/25 hover:shadow-[0_0_28px_-6px_rgba(52,211,153,0.85)] transition"
+                  >
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+                    </span>
+                    Live Website
+                    <ExternalLink size={13} />
+                  </a>
+                )}
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="interactive-lift inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-4 py-2 text-xs font-medium text-cyan-100 hover:bg-cyan-400/15"
+                  >
+                    GitHub
+                    <ExternalLink size={13} />
+                  </a>
+                )}
+              </div>
             </motion.article>
           ))}
         </div>
@@ -614,13 +650,41 @@ export default function Home() {
                   {selectedProject.outcome}
                 </p>
               </div>
-              <button
-                type="button"
-                onClick={() => setSelectedProject(null)}
-                className="mt-7 inline-flex rounded-full border border-white/20 px-4 py-2 text-xs text-white transition hover:bg-white/10"
-              >
-                Close
-              </button>
+              <div className="mt-7 flex flex-wrap gap-3">
+                {selectedProject.liveLink && (
+                  <a
+                    href={selectedProject.liveLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-emerald-300/40 bg-emerald-400/15 px-5 py-2.5 text-sm font-semibold text-emerald-100 shadow-[0_0_20px_-6px_rgba(52,211,153,0.6)] hover:bg-emerald-400/25 transition"
+                  >
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+                    </span>
+                    Live Website
+                    <ExternalLink size={14} />
+                  </a>
+                )}
+                {selectedProject.link && (
+                  <a
+                    href={selectedProject.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-5 py-2.5 text-sm text-cyan-100 hover:bg-cyan-400/15 transition"
+                  >
+                    GitHub
+                    <ExternalLink size={14} />
+                  </a>
+                )}
+                <button
+                  type="button"
+                  onClick={() => setSelectedProject(null)}
+                  className="inline-flex rounded-full border border-white/20 px-4 py-2 text-xs text-white transition hover:bg-white/10"
+                >
+                  Close
+                </button>
+              </div>
             </motion.div>
           </motion.div>
         )}
@@ -781,25 +845,37 @@ export default function Home() {
             Available for full-time roles from June 2026
           </h3>
           <div className="relative mt-5 flex flex-wrap justify-center gap-2">
-            {["Software Engineer", "Backend Developer", "AI / ML Engineer (Entry Level)"].map(
-              (role) => (
-                <span
-                  key={role}
-                  className="rounded-full border border-white/15 bg-white/[0.04] px-3 py-1 text-xs text-slate-100"
-                >
-                  {role}
-                </span>
-              )
-            )}
+            {[
+              "Data Analytics",
+              "Business Intelligence",
+              "Operations & Management",
+              "MTO / Leadership Programs",
+              "Software Engineering",
+              "AI / ML (Entry Level)"
+            ].map((role) => (
+              <span
+                key={role}
+                className="rounded-full border border-white/15 bg-white/[0.04] px-3 py-1 text-xs text-slate-100"
+              >
+                {role}
+              </span>
+            ))}
           </div>
           <div className="relative mt-7 flex flex-wrap items-center justify-center gap-3">
             <a
-              href="/Ridhwan_job_CV.pdf"
-              download
+              href="/resume"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-500 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-[0_0_30px_-8px_rgba(56,189,248,0.8)] transition hover:-translate-y-0.5"
+            >
+              <ExternalLink size={15} />
+              View Resume Online
+            </a>
+            <a
+              href="/Corporate_resume.pdf"
+              download="Ridhwan_Corporate_Resume.pdf"
               className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-slate-900 transition hover:-translate-y-0.5"
             >
               <Download size={15} />
-              Download Resume
+              Download PDF
             </a>
             <a
               href="mailto:ridhwankhan03@gmail.com"
