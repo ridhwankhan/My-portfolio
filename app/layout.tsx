@@ -75,6 +75,13 @@ export const metadata: Metadata = {
   verification: {
     // Add your Google Search Console verification token here once you register
     // google: "YOUR_VERIFICATION_TOKEN"
+  },
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png", sizes: "512x512" }
+    ],
+    shortcut: "/icon.png",
+    apple: "/icon.png"
   }
 };
 
