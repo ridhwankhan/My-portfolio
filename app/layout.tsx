@@ -73,8 +73,7 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"]
   },
   verification: {
-    // Add your Google Search Console verification token here once you register
-    // google: "YOUR_VERIFICATION_TOKEN"
+    google: "T-VrHK-MIIYmMOaBGQfy99Sb2ZdkdavmwpWD6M71z2g"
   },
   icons: {
     icon: [
