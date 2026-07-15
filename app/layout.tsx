@@ -8,11 +8,11 @@ const SHORT_NAME = "Ridhwan Khan";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${FULL_NAME} | Portfolio — Data Analytics, Operations & Software Engineering`,
+    default: `${FULL_NAME} | Portfolio — Full-Stack Software Engineering`,
     template: `%s | ${FULL_NAME}`
   },
   description:
-    "Official portfolio of Ridhwanur Rahman Khan (Ridhwan Khan) — Computer Science graduate from BRAC University. Specialising in Data Analytics, Business Intelligence, Operations Management, MTO Leadership Programs, and Software Engineering. Available for full-time roles from June 2026.",
+    "Official portfolio of Ridhwanur Rahman Khan (Ridhwan Khan) — Computer Science undergraduate at BRAC University (CGPA 3.47; expected Oct 2026). Building production full-stack web apps, secure systems, and embedded software. Open to full-time software engineering roles.",
   keywords: [
     "Ridhwan",
     "Ridhwan Khan",
@@ -20,15 +20,16 @@ export const metadata: Metadata = {
     "Ridhwanur Khan",
     "ridhwan khan portfolio",
     "ridhwan brac university",
-    "ridhwan data analytics",
     "ridhwan software engineer",
+    "ridhwan full stack",
     "Ridhwanur Rahman Khan portfolio",
     "ridhwan khan bangladesh",
     "ridhwan khan dhaka",
-    "ridhwan operations management",
-    "ridhwan MTO",
-    "ridhwan business intelligence",
-    "BRAC University computer science graduate 2026"
+    "ridhwan next.js",
+    "ridhwan react typescript",
+    "Shoukhin",
+    "KAIRO",
+    "BRAC University computer science 2026"
   ],
   authors: [{ name: FULL_NAME, url: SITE_URL }],
   creator: FULL_NAME,
@@ -53,9 +54,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: `${FULL_NAME} — Portfolio`,
-    title: `${FULL_NAME} | Data Analytics, Operations & Software Engineering`,
+    title: `${FULL_NAME} | Full-Stack Software Engineering`,
     description:
-      `${FULL_NAME} (${SHORT_NAME}) — CS graduate from BRAC University. Open to Data Analytics, Business Intelligence, Operations & Management, MTO Leadership, and Software Engineering roles from June 2026.`,
+      `${FULL_NAME} (${SHORT_NAME}) — CS undergraduate at BRAC University (CGPA 3.47; expected Oct 2026). Open to full-stack software engineering, secure systems, and embedded roles.`,
     images: [
       {
         url: "/og-image.jpg",
@@ -69,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${FULL_NAME} | Portfolio`,
     description:
-      "CS graduate open to Data Analytics, Operations, MTO Leadership & Software Engineering roles from June 2026.",
+      "CS undergraduate (expected Oct 2026) building production full-stack apps, secure systems, and embedded software.",
     images: ["/og-image.jpg"]
   },
   verification: {
@@ -99,7 +100,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               alternateName: ["Ridhwan Khan", "Ridhwan", "Ridhwanur Khan"],
               url: SITE_URL,
               image: `${SITE_URL}/my_hero.jpeg`,
-              jobTitle: "Computer Science Graduate · Data Analytics & Software Engineering",
+              jobTitle: "Computer Science Undergraduate · Full-Stack Software Engineering",
               alumniOf: {
                 "@type": "CollegeOrUniversity",
                 name: "BRAC University",
@@ -117,14 +118,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 SITE_URL
               ],
               knowsAbout: [
-                "Data Analytics",
-                "Business Intelligence",
-                "Operations Management",
                 "Software Engineering",
-                "Machine Learning",
+                "Full-Stack Development",
+                "React",
+                "TypeScript",
+                "Next.js",
                 "Python",
-                "SQL",
-                "Next.js"
+                "PostgreSQL",
+                "Supabase",
+                "Cryptography",
+                "Embedded Systems"
               ]
             })
           }}

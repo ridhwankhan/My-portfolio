@@ -31,18 +31,18 @@ export default function ResumePage() {
 
           <div className="flex items-center gap-2">
             <span className="hidden text-xs text-slate-400 md:block">
-              Ridhwanur Rahman Khan — Corporate Resume
+              Ridhwanur Rahman Khan — Resume
             </span>
             <a
-              href="/Corporate_resume.pdf"
-              download="Ridhwan_Corporate_Resume.pdf"
+              href="/resume_Ridhwanur_Rahman_Khan.pdf"
+              download="resume_Ridhwanur_Rahman_Khan.pdf"
               className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold text-slate-900 transition hover:-translate-y-0.5"
             >
               <Download size={13} />
               Download PDF
             </a>
             <a
-              href="/Corporate_resume.pdf"
+              href="/resume_Ridhwanur_Rahman_Khan.pdf"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-4 py-2 text-xs font-medium text-cyan-100 transition hover:bg-cyan-400/20"
@@ -69,7 +69,7 @@ export default function ResumePage() {
                 Ridhwanur Rahman Khan
               </h1>
               <p className="mt-0.5 text-xs text-slate-400">
-                Corporate Resume · Available from June 2026
+                Resume · Expected graduation Oct 2026 · Open to Work
               </p>
             </div>
             <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-300/35 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-100">
@@ -84,8 +84,8 @@ export default function ResumePage() {
           {/* PDF iframe */}
           <div className="overflow-hidden rounded-2xl border border-white/10 shadow-[0_0_60px_-20px_rgba(56,189,248,0.25)]">
             <iframe
-              src="/Corporate_resume.pdf#toolbar=1&navpanes=0&view=FitH"
-              title="Ridhwanur Rahman Khan — Corporate Resume"
+              src="/resume_Ridhwanur_Rahman_Khan.pdf#toolbar=1&navpanes=0&view=FitH"
+              title="Ridhwanur Rahman Khan — Resume"
               className="h-[82vh] w-full"
               style={{ background: "#1e293b" }}
             />
@@ -95,8 +95,8 @@ export default function ResumePage() {
           <p className="mt-3 text-center text-xs text-slate-500">
             Use the toolbar above to zoom, navigate, or print · Or{" "}
             <a
-              href="/Corporate_resume.pdf"
-              download="Ridhwan_Corporate_Resume.pdf"
+              href="/resume_Ridhwanur_Rahman_Khan.pdf"
+              download="resume_Ridhwanur_Rahman_Khan.pdf"
               className="text-cyan-400 underline-offset-2 hover:underline"
             >
               download the PDF directly

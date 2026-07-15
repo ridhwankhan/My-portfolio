@@ -30,93 +30,54 @@ const navItems = [
 
 const projects = [
   {
-    title: "KAIRO — Real-Time Job Monitor",
-    stack: ["Next.js", "PostgreSQL", "Telegram Bot", "Vercel"],
+    title: "Shoukhin E-Commerce Platform",
+    stack: ["React", "TypeScript", "Supabase"],
+    link: "https://github.com/ridhwankhan/soukhin",
+    liveLink: "https://soukhin.vercel.app",
+    statement: "A bilingual production storefront needed secure checkout, admin control, and real payments for live customers.",
+    problem:
+      "Building and operating a full e-commerce stack alone meant shipping auth, catalog, payments, and admin tooling without sacrificing security or speed.",
+    solution:
+      "Shipped a React/TypeScript storefront with Supabase (PostgreSQL, Auth, Storage, Edge Functions), role-based admin, RLS, and bKash checkout with server-side price validation.",
+    outcome:
+      "Generated 25 cold-market sales in 4 days (60% net margin) and achieved a 20% repeat-purchase rate within 72 hours."
+  },
+  {
+    title: "KAIRO — Job Monitoring SaaS",
+    stack: ["Next.js", "Supabase", "Python"],
     link: "https://github.com/ridhwankhan/kairo",
     liveLink: "https://kairo-job.vercel.app",
-    statement: "Job seekers waste hours manually checking dozens of career portals for new listings.",
+    statement: "Job seekers waste hours manually checking career pages for new listings.",
     problem:
-      "There was no unified, automated system that could scrape multiple job boards, deduplicate results, and deliver real-time alerts to users personally.",
+      "There was no unified system to automate career-page monitoring, alerts, and admin governance in one product.",
     solution:
-      "Built KAIRO — a full-stack, real-time job monitoring platform with automated scrapers, a PostgreSQL-backed deduplication engine, per-user Telegram bot notifications, and a live dashboard for tracking opportunities across portals.",
+      "Launched a live SaaS for career-page monitoring and job alerts; owned requirements, architecture, build, testing, and production deployment with admin tools for user management and messaging.",
     outcome:
-      "Deployed a production-grade SaaS-style platform on Vercel that actively monitors job listings 24/7 and pushes instant alerts to registered users via Telegram."
+      "Deployed a production SaaS on Vercel that monitors listings and supports ongoing user and account moderation."
   },
   {
     title: "ZERO Trust Banking System",
     stack: ["Django", "React", "Cryptography"],
     link: "https://github.com/ridhwankhan/ZERO-trust-Banking-system",
     liveLink: null,
-    statement: "Banks need stronger trust boundaries without slowing down user actions.",
+    statement: "Financial prototypes need stronger trust boundaries without slowing down user actions.",
     problem:
-      "Traditional security layers were not enough for sensitive financial workflows and peer-to-peer transactions.",
+      "Traditional security layers were not enough for sensitive financial workflows and simulated transactions.",
     solution:
-      "Built a zero-trust banking platform with role-based flows, RSA/ECC encryption, and stricter identity checks at every step.",
+      "Built a secure banking prototype with role-based access control, RSA/ECC cryptography, and zero-trust design.",
     outcome:
-      "Created a safer, modern prototype that shows secure operations can still feel smooth for users."
-  },
-  {
-    title: "Multimodal ML Framework",
-    stack: ["Python", "ML", "Data Engineering"],
-    link: null,
-    liveLink: null,
-    statement: "Land-use planning often relies on fragmented data and guesswork.",
-    problem:
-      "Geospatial, climate, and socio-economic signals were spread across different formats and hard to combine.",
-    solution:
-      "Designed a multimodal pipeline that cleans, aligns, and learns from mixed datasets for better prediction quality.",
-    outcome:
-      "Improved consistency of analysis and made model outputs more useful for practical agricultural decisions."
-  },
-  {
-    title: "Meta-Visual Deepfake Forensics",
-    stack: ["Deep Learning", "CV", "NLP"],
-    link: null,
-    liveLink: null,
-    statement: "Deepfake detection fails when models depend on only one signal type.",
-    problem:
-      "Visual-only detectors were easier to bypass on tougher manipulated media samples.",
-    solution:
-      "Combined visual features with metadata-driven signals in a multimodal detection workflow.",
-    outcome:
-      "Raised robustness against manipulated content and improved confidence in detection results."
-  },
-  {
-    title: "Techie Tokor E-Commerce",
-    stack: ["PHP", "MySQL"],
-    link: "https://github.com/ridhwankhan/CSE370-Project",
-    liveLink: null,
-    statement: "Small online stores need reliable shopping flows without heavy infrastructure.",
-    problem:
-      "Basic storefront implementations struggled with auth, product handling, and scalable order flow.",
-    solution:
-      "Built a full-stack e-commerce platform with structured relational schema and optimized backend operations.",
-    outcome:
-      "Delivered a stable shopping experience with better performance and cleaner store management."
-  },
-  {
-    title: "Server Automation & ETL Utility",
-    stack: ["Bash", "Linux", "Cron"],
-    link: "https://github.com/ridhwankhan/Linux-Shell-Scripting",
-    liveLink: null,
-    statement: "Manual server tasks create delays and increase operation mistakes.",
-    problem:
-      "Backups and data pulls were repetitive, error-prone, and inconsistent across schedules.",
-    solution:
-      "Automated recurring jobs with Bash scripts, cron scheduling, and logging-driven ETL tasks.",
-    outcome:
-      "Reduced manual overhead and established repeatable data operations with reliable timing."
+      "Demonstrated safer financial operations with cryptography-backed identity checks at every step."
   },
   {
     title: "Quadcopter Flight Controller",
-    stack: ["C++", "Arduino", "Embedded"],
+    stack: ["C++", "Arduino", "Embedded Systems"],
     link: "https://github.com/ridhwankhan/Arduino-flight-controller",
     liveLink: null,
     statement: "Stable flight requires fast control loops and accurate sensor handling.",
     problem:
       "Without tuned feedback control, the quadcopter drifted and became unstable under movement.",
     solution:
-      "Implemented PID-based flight control with IMU and ESC integration on embedded hardware.",
+      "Engineered a custom flight controller with MPU-6050 IMU sensing, ESC motor control, PID stabilization, and a 250Hz real-time control loop.",
     outcome:
       "Achieved smoother real-time stabilization and stronger hardware-software control integration."
   }
@@ -130,28 +91,10 @@ const certifications = [
     link: "https://www.coursera.org/account/accomplishments/records/VPKDZ344UPHQ"
   },
   {
-    title: "Excel Basics for Data Analysis",
-    provider: "IBM",
-    description: "Practical analysis workflows with spreadsheet tooling.",
-    link: "https://www.coursera.org/account/accomplishments/records/MZ7XNU90NPSD"
-  },
-  {
-    title: "Data Visualization and Dashboards",
-    provider: "IBM",
-    description: "Building dashboards and business-friendly data stories.",
-    link: "https://www.coursera.org/account/accomplishments/records/NHMVLI9B3AU0"
-  },
-  {
     title: "Machine Learning with Python (Honors)",
     provider: "IBM",
     description: "Applied ML concepts and model-building workflow.",
     link: "https://www.coursera.org/account/accomplishments/records/QLUMHV6CN7J4"
-  },
-  {
-    title: "Introduction to Software Engineering",
-    provider: "IBM",
-    description: "Software lifecycle, process, and team collaboration basics.",
-    link: "https://www.coursera.org/account/accomplishments/records/Q96T2E1H58CP"
   },
   {
     title: "Introduction to Deep Learning and Neural Networks with Keras",
@@ -160,16 +103,16 @@ const certifications = [
     link: "https://www.coursera.org/account/accomplishments/records/W5YSDN986KPA"
   },
   {
+    title: "Introduction to Software Engineering",
+    provider: "IBM",
+    description: "Software lifecycle, process, and team collaboration basics.",
+    link: "https://www.coursera.org/account/accomplishments/records/Q96T2E1H58CP"
+  },
+  {
     title: "Hands-on Linux Commands and Shell Scripting",
     provider: "IBM",
     description: "Command-line automation, scripting, and system workflow efficiency.",
     link: "https://www.coursera.org/account/accomplishments/records/T2JF14B8P7W3"
-  },
-  {
-    title: "Ask Questions to Make Data-Driven Decisions",
-    provider: "Google",
-    description: "Business analytics mindset for asking better questions and guiding decisions.",
-    link: "https://www.coursera.org/account/accomplishments/records/GMKO8YT5EDC6"
   }
 ];
 
@@ -177,41 +120,41 @@ const timeline = [
   {
     title: "Started CS Degree",
     period: "2022",
-    detail: "Began my Computer Science journey at BRAC University.",
+    detail: "Began Computer Science at BRAC University (CGPA 3.47).",
     phase:
-      "Built my foundation in computer science and started exploring how technology creates business value."
+      "Built foundations in programming, data structures, and systems while exploring how software creates real value."
   },
   {
-    title: "Learned Programming Fundamentals",
-    period: "Early Journey",
-    detail: "Built a strong base in programming, data structures, and problem solving.",
-    phase: "Developed coding discipline and structured thinking through hands-on practice."
+    title: "Operations Associate",
+    period: "2022 – Present",
+    detail: "Supported order fulfillment, customer communication, and sourcing at Shilar Sokher Rannaghor.",
+    phase: "Learned operations discipline running an online food and apparel business day to day."
   },
   {
-    title: "Built First Projects",
+    title: "Built Secure & Embedded Systems",
     period: "Hands-on Phase",
-    detail: "Moved from theory to practice by shipping end-to-end project work.",
-    phase: "Learned execution, ownership, and product thinking by building complete solutions."
+    detail: "Shipped ZERO Trust banking and a custom Arduino flight controller with real-time control.",
+    phase: "Grew into cryptography, RBAC, and embedded C++ through end-to-end ownership."
   },
   {
-    title: "Explored AI/ML",
+    title: "Launched KAIRO SaaS",
     period: "Growth Phase",
-    detail: "Started applying ML concepts and data-driven thinking to real use cases.",
-    phase: "Connected data science methods with real-world decision support and intelligence."
+    detail: "Took a job-monitoring product from requirements to live production deployment.",
+    phase: "Owned architecture, build, testing, and admin governance for a live SaaS."
   },
   {
-    title: "Business Analytics and Leadership Focus",
-    period: "Current Focus",
-    detail: "Expanded into business analytics, strategy, and leadership-oriented impact.",
+    title: "Founded Shoukhin Lifestyle",
+    period: "2026 – Present",
+    detail: "Built and operate a production e-commerce storefront solo — React, TypeScript, Supabase, bKash.",
     phase:
-      "Building a profile that combines technical depth with communication, planning, and decision-making."
+      "Shipped secure payments, RLS-hardened auth, and bilingual checkout; drove early sales and repeat purchases."
   },
   {
-    title: "Final Semester (Current)",
+    title: "Final Year (Current)",
     period: "Now",
-    detail: "Graduating May 2026. Open to work from June 2026.",
+    detail: "Expected graduation Oct 2026. Open to full-time software engineering roles.",
     phase:
-      "Preparing for full-time roles where software, analytics, and cross-functional collaboration matter.",
+      "Shipping production full-stack products and preparing for roles in software engineering, secure systems, and AI-assisted development.",
     highlight: true
   }
 ];
@@ -222,28 +165,28 @@ const fadeUp = {
 };
 
 export default function Home() {
-  const rotatingWords = ["AI systems", "web apps", "data tools"];
+  const rotatingWords = ["full-stack apps", "secure systems", "embedded software"];
   const [activeWord, setActiveWord] = useState(0);
   const [selectedProject, setSelectedProject] = useState<(typeof projects)[number] | null>(null);
   const [activeCert, setActiveCert] = useState(0);
   const [activeAsk, setActiveAsk] = useState<string | null>("What do you build?");
   const [showFullJourney, setShowFullJourney] = useState(false);
-  const [expandedJourney, setExpandedJourney] = useState("Final Semester (Current)");
+  const [expandedJourney, setExpandedJourney] = useState("Final Year (Current)");
   const askItems = [
     {
       question: "What do you build?",
       answer:
-        "I build practical software products with clean user experience, solid backend logic, and clear real-world value."
+        "I build production full-stack web apps, secure systems, and embedded software — from e-commerce storefronts to real-time control systems."
     },
     {
       question: "What technologies do you use?",
       answer:
-        "I mostly work with Python, React, Django, SQL, and ML tooling. I choose tools based on the problem, not trends."
+        "I work with React, TypeScript, Next.js, Python, PostgreSQL/Supabase, Django, C++, and Arduino. I also use AI tools to accelerate coding and technical audits."
     },
     {
       question: "Are you available for work?",
       answer:
-        "Yes. I am available for full-time roles from June 2026 in software engineering, backend, and entry-level AI/ML roles."
+        "Yes. I graduate from BRAC University in October 2026 (CGPA 3.47) and am open to full-time software engineering roles."
     }
   ];
 
@@ -328,7 +271,7 @@ export default function Home() {
             className="mx-auto inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-xs text-cyan-200"
           >
             <Sparkles size={14} />
-            Open to work from June 2026
+            Open to work · Graduating Oct 2026
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
@@ -366,8 +309,9 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-300 md:text-lg"
           >
-            RIDHWANUR RAHMAN KHAN - Computer Science student graduating May 2026. Open to work
-            from June 2026.
+            RIDHWANUR RAHMAN KHAN — Computer Science undergraduate at BRAC University (CGPA
+            3.47; expected Oct 2026). Building production full-stack apps, secure systems, and
+            embedded software.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -412,21 +356,24 @@ export default function Home() {
               <h2 className="text-2xl font-semibold md:text-3xl">About Me</h2>
               <div className="mt-5 space-y-4 text-slate-300">
                 <p>
-                  I am a Computer Science graduate (May 2026) from BRAC University with a strong
-                  foundation in software engineering, data analytics, and business intelligence.
+                  I am a Computer Science undergraduate at BRAC University (CGPA 3.47; expected
+                  Oct 2026) building production full-stack web apps, secure systems, and embedded
+                  software.
                 </p>
                 <p>
-                  My work sits at the intersection of technology and strategy — I build data-driven
-                  systems that solve real operational problems, not just technical exercises.
+                  I have shipped live products with React, TypeScript, Next.js, Python, and
+                  PostgreSQL — including Shoukhin, a bilingual e-commerce storefront with secure
+                  bKash payments, and KAIRO, a live job-monitoring SaaS.
                 </p>
                 <p>
-                  I am particularly drawn to roles in data analytics, operations management, and
-                  corporate leadership tracks, where I can translate technical insight into
-                  measurable business outcomes.
+                  My experience spans cryptography and zero-trust design, real-time control systems
+                  on Arduino, and AI-assisted development workflows with Claude, DeepSeek, ChatGPT,
+                  Gemini, and Perplexity.
                 </p>
                 <p>
-                  I thrive in cross-functional environments and bring both the analytical rigour of
-                  an engineer and the communication clarity of a business thinker.
+                  I also run day-to-day operations for an online food and apparel business, and as
+                  founder of Shoukhin Lifestyle I own product, engineering, and go-to-market end to
+                  end.
                 </p>
               </div>
             </motion.div>
@@ -490,9 +437,9 @@ export default function Home() {
         </motion.h2>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           {[
-            { icon: Code2, title: "Software Engineering", text: "Backend systems, APIs, scalable architecture, product-focused execution." },
-            { icon: Database, title: "Data + AI/ML", text: "EDA, model development, multimodal pipelines, and practical analytics." },
-            { icon: BriefcaseBusiness, title: "Business + Leadership Lens", text: "Interest in business intelligence, leadership, and strategy-driven product execution." }
+            { icon: Code2, title: "Languages & Frameworks", text: "Python, C++, TypeScript, JavaScript, SQL, PHP, Bash · React, Next.js, Django, TensorFlow, Keras." },
+            { icon: Database, title: "Backend & Data", text: "PostgreSQL, MySQL, Supabase, REST APIs, authentication, and Row-Level Security (RLS)." },
+            { icon: BriefcaseBusiness, title: "Systems & Tools", text: "Git, Linux, Arduino, embedded systems, Vercel, DSA, and AI-assisted development workflows." }
           ].map((item, idx) => (
             <motion.article
               key={item.title}
@@ -842,16 +789,16 @@ export default function Home() {
             Open to Work
           </motion.span>
           <h3 className="relative mt-4 text-2xl font-semibold text-white md:text-3xl">
-            Available for full-time roles from June 2026
+            Open to full-time roles · Graduating Oct 2026
           </h3>
           <div className="relative mt-5 flex flex-wrap justify-center gap-2">
             {[
-              "Data Analytics",
-              "Business Intelligence",
-              "Operations & Management",
-              "MTO / Leadership Programs",
               "Software Engineering",
-              "AI / ML (Entry Level)"
+              "Full-Stack Development",
+              "Secure Systems",
+              "Backend / APIs",
+              "Embedded Software",
+              "AI-Assisted Development"
             ].map((role) => (
               <span
                 key={role}
@@ -870,8 +817,8 @@ export default function Home() {
               View Resume Online
             </a>
             <a
-              href="/Corporate_resume.pdf"
-              download="Ridhwan_Corporate_Resume.pdf"
+              href="/resume_Ridhwanur_Rahman_Khan.pdf"
+              download="resume_Ridhwanur_Rahman_Khan.pdf"
               className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-slate-900 transition hover:-translate-y-0.5"
             >
               <Download size={15} />
