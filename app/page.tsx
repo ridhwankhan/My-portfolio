@@ -6,8 +6,6 @@ import Image from "next/image";
 import {
   ArrowRight,
   BriefcaseBusiness,
-  ChevronLeft,
-  ChevronRight,
   Code2,
   Database,
   Download,
@@ -19,12 +17,14 @@ import {
   Mail,
   Sparkles
 } from "lucide-react";
+import CertificateDeck from "./components/CertificateDeck";
 
 const navItems = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Timeline", href: "#timeline" },
+  { label: "Certifications", href: "#certifications" },
   { label: "Contact", href: "#contact" }
 ];
 
@@ -85,62 +85,95 @@ const projects = [
 
 const certifications = [
   {
-    title: "Foundations: Data, Data, Everywhere",
-    provider: "Google",
-    description: "Core data thinking and analysis foundations.",
-    link: "https://www.coursera.org/account/accomplishments/records/VPKDZ344UPHQ"
+    title: "Data Visualization and Dashboards with Excel and Cognos",
+    provider: "IBM",
+    description: "Building dashboards and business-friendly data stories.",
+    link: "https://www.coursera.org/account/accomplishments/records/NHMVLI9B3AU0",
+    image: "/certifications/ibm-data-visualization.jpeg",
+    date: "Feb 2026"
   },
   {
-    title: "Machine Learning with Python (Honors)",
+    title: "Excel Basics for Data Analysis",
     provider: "IBM",
-    description: "Applied ML concepts and model-building workflow.",
-    link: "https://www.coursera.org/account/accomplishments/records/QLUMHV6CN7J4"
-  },
-  {
-    title: "Introduction to Deep Learning and Neural Networks with Keras",
-    provider: "IBM",
-    description: "Deep learning foundations and neural network workflow in practice.",
-    link: "https://www.coursera.org/account/accomplishments/records/W5YSDN986KPA"
+    description: "Practical analysis workflows with spreadsheet tooling.",
+    link: "https://www.coursera.org/account/accomplishments/records/MZ7XNU90NPSD",
+    image: "/certifications/ibm-excel-basics.jpeg",
+    date: "Feb 2026"
   },
   {
     title: "Introduction to Software Engineering",
     provider: "IBM",
     description: "Software lifecycle, process, and team collaboration basics.",
-    link: "https://www.coursera.org/account/accomplishments/records/Q96T2E1H58CP"
+    link: "https://www.coursera.org/account/accomplishments/records/Q96T2E1H58CP",
+    image: "/certifications/ibm-software-engineering.jpeg",
+    date: "Oct 2024"
   },
   {
-    title: "Hands-on Linux Commands and Shell Scripting",
+    title: "Machine Learning with Python",
+    provider: "IBM",
+    description: "Applied ML concepts and model-building workflow.",
+    link: "https://www.credly.com/go/73syFRKm",
+    image: "/certifications/ibm-machine-learning-python.png",
+    date: "Oct 2024"
+  },
+  {
+    title: "Deep Learning Essentials with Keras",
+    provider: "IBM",
+    description: "Deep learning foundations and neural network workflow in practice.",
+    link: "https://www.credly.com/go/kZa8jAh7",
+    image: "/certifications/ibm-deep-learning-keras.png",
+    date: "Oct 2024"
+  },
+  {
+    title: "Hands-on Introduction to Linux Commands and Shell Scripting",
     provider: "IBM",
     description: "Command-line automation, scripting, and system workflow efficiency.",
-    link: "https://www.coursera.org/account/accomplishments/records/T2JF14B8P7W3"
+    link: "https://www.coursera.org/account/accomplishments/records/T2JF14B8P7W3",
+    image: "/certifications/ibm-linux-shell.jpeg",
+    date: "Aug 2024"
+  },
+  {
+    title: "Ask Questions to Make Data-Driven Decisions",
+    provider: "Google",
+    description: "Business analytics mindset for asking better questions and guiding decisions.",
+    link: "https://www.coursera.org/account/accomplishments/records/GMKO8YT5EDC6",
+    image: "/certifications/google-data-driven-decisions.jpeg",
+    date: "Aug 2024"
+  },
+  {
+    title: "Foundations: Data, Data, Everywhere",
+    provider: "Google",
+    description: "Core data thinking and analysis foundations.",
+    link: "https://www.coursera.org/account/accomplishments/records/VPKDZ344UPHQ",
+    image: "/certifications/google-data-foundations.jpeg",
+    date: "Aug 2024"
+  },
+  {
+    title: "App Development — Residential Semester",
+    provider: "BRAC University",
+    description: "Extra-curricular app development completed during Residential Semester (RS-62).",
+    link: "/certifications/brac-app-development.jpeg",
+    image: "/certifications/brac-app-development.jpeg",
+    date: "Spring 2023"
   }
 ];
 
+/** Newest entries first — current phase stays on top. */
 const timeline = [
   {
-    title: "Started CS Degree",
-    period: "2022",
-    detail: "Began Computer Science at BRAC University (CGPA 3.47).",
+    title: "Final Year (Current)",
+    period: "Now",
+    detail: "Expected graduation Oct 2026. Open to full-time software engineering roles.",
     phase:
-      "Built foundations in programming, data structures, and systems while exploring how software creates real value."
+      "Shipping production full-stack products and preparing for roles in software engineering, secure systems, and AI-assisted development.",
+    highlight: true
   },
   {
-    title: "Operations Associate",
-    period: "2022 – Present",
-    detail: "Supported order fulfillment, customer communication, and sourcing at Shilar Sokher Rannaghor.",
-    phase: "Learned operations discipline running an online food and apparel business day to day."
-  },
-  {
-    title: "Built Secure & Embedded Systems",
-    period: "Hands-on Phase",
-    detail: "Shipped ZERO Trust banking and a custom Arduino flight controller with real-time control.",
-    phase: "Grew into cryptography, RBAC, and embedded C++ through end-to-end ownership."
-  },
-  {
-    title: "Launched KAIRO SaaS",
-    period: "Growth Phase",
-    detail: "Took a job-monitoring product from requirements to live production deployment.",
-    phase: "Owned architecture, build, testing, and admin governance for a live SaaS."
+    title: "Multimodal Thesis Defended",
+    period: "Thesis",
+    detail: "Defended multimodal thesis with 98% marks.",
+    phase:
+      "Completed and defended a multimodal research thesis at a high academic standard, strengthening research and presentation skills."
   },
   {
     title: "Founded Shoukhin Lifestyle",
@@ -150,12 +183,29 @@ const timeline = [
       "Shipped secure payments, RLS-hardened auth, and bilingual checkout; drove early sales and repeat purchases."
   },
   {
-    title: "Final Year (Current)",
-    period: "Now",
-    detail: "Expected graduation Oct 2026. Open to full-time software engineering roles.",
+    title: "Launched KAIRO SaaS",
+    period: "Growth Phase",
+    detail: "Took a job-monitoring product from requirements to live production deployment.",
+    phase: "Owned architecture, build, testing, and admin governance for a live SaaS."
+  },
+  {
+    title: "Built Secure & Embedded Systems",
+    period: "Hands-on Phase",
+    detail: "Shipped ZERO Trust banking and a custom Arduino flight controller with real-time control.",
+    phase: "Grew into cryptography, RBAC, and embedded C++ through end-to-end ownership."
+  },
+  {
+    title: "Operations Associate",
+    period: "2022 – Present",
+    detail: "Supported order fulfillment, customer communication, and sourcing at Shilar Sokher Rannaghor.",
+    phase: "Learned operations discipline running an online food and apparel business day to day."
+  },
+  {
+    title: "Started CS Degree",
+    period: "2022",
+    detail: "Began Computer Science at BRAC University (CGPA 3.47).",
     phase:
-      "Shipping production full-stack products and preparing for roles in software engineering, secure systems, and AI-assisted development.",
-    highlight: true
+      "Built foundations in programming, data structures, and systems while exploring how software creates real value."
   }
 ];
 
@@ -168,7 +218,6 @@ export default function Home() {
   const rotatingWords = ["full-stack apps", "secure systems", "embedded software"];
   const [activeWord, setActiveWord] = useState(0);
   const [selectedProject, setSelectedProject] = useState<(typeof projects)[number] | null>(null);
-  const [activeCert, setActiveCert] = useState(0);
   const [activeAsk, setActiveAsk] = useState<string | null>("What do you build?");
   const [showFullJourney, setShowFullJourney] = useState(false);
   const [expandedJourney, setExpandedJourney] = useState("Final Year (Current)");
@@ -197,14 +246,7 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [rotatingWords.length]);
 
-  useEffect(() => {
-    const certTimer = setInterval(() => {
-      setActiveCert((prev) => (prev + 1) % certifications.length);
-    }, 3600);
-    return () => clearInterval(certTimer);
-  }, []);
-
-  const orderedJourney = [...timeline].sort((a, b) => Number(Boolean(b.highlight)) - Number(Boolean(a.highlight)));
+  const orderedJourney = timeline;
 
   return (
     <motion.main
@@ -648,7 +690,7 @@ export default function Home() {
           Journey
         </motion.h2>
         <p className="mt-3 max-w-2xl text-sm text-slate-300 md:text-base">
-          A simple timeline of how I learned by building, one step at a time.
+          A simple timeline of how I learned by building — newest on top.
         </p>
         <div className="mt-6 flex justify-end">
           <button
@@ -760,7 +802,7 @@ export default function Home() {
                 </motion.button>
               ))}
               <p className="absolute bottom-0 left-1 text-xs text-slate-400">
-                Current phase is on top. Click stack to expand full journey.
+                Newest on top. Click stack to expand full journey.
               </p>
             </motion.div>
           )}
@@ -835,96 +877,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section className="snap-section mx-auto max-w-6xl px-5 py-12 md:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.35 }}
-          className="glass w-full overflow-hidden rounded-3xl p-6 md:p-8"
-        >
-          <div className="mb-5 flex items-center justify-between">
-            <h3 className="text-xl font-semibold md:text-2xl">Certification Highlights</h3>
-            <div className="flex items-center gap-2">
-              <span className="mr-2 hidden rounded-full border border-cyan-300/25 bg-cyan-400/10 px-2.5 py-1 text-[10px] uppercase tracking-wider text-cyan-100 md:inline-flex">
-                Auto Play
-              </span>
-              <button
-                type="button"
-                onClick={() =>
-                  setActiveCert((prev) => (prev - 1 + certifications.length) % certifications.length)
-                }
-                className="interactive-lift rounded-full border border-white/20 p-2 text-slate-100 hover:bg-white/10"
-                aria-label="Previous certification"
-              >
-                <ChevronLeft size={16} />
-              </button>
-              <button
-                type="button"
-                onClick={() => setActiveCert((prev) => (prev + 1) % certifications.length)}
-                className="interactive-lift rounded-full border border-white/20 p-2 text-slate-100 hover:bg-white/10"
-                aria-label="Next certification"
-              >
-                <ChevronRight size={16} />
-              </button>
-            </div>
-          </div>
-          <AnimatePresence mode="wait">
-            <motion.a
-              key={certifications[activeCert].title}
-              href={certifications[activeCert].link}
-              target="_blank"
-              rel="noreferrer"
-              initial={{ opacity: 0, x: 26 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -26 }}
-              transition={{ duration: 0.35 }}
-              className="group grid gap-5 rounded-3xl border border-white/10 bg-gradient-to-br from-cyan-500/10 via-slate-900/70 to-violet-500/10 p-5 md:grid-cols-[1.1fr_0.9fr] md:p-7"
-            >
-              <div>
-                <p className="text-xs uppercase tracking-wider text-cyan-100/85">Certification</p>
-                <h4 className="mt-2 text-xl font-semibold text-white">{certifications[activeCert].title}</h4>
-                <p className="mt-2 text-sm text-slate-300">{certifications[activeCert].description}</p>
-                <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1 text-xs text-cyan-100">
-                  {certifications[activeCert].provider}
-                </div>
-              </div>
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60 p-4">
-                <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-cyan-500/20 blur-2xl" />
-                <div className="absolute -bottom-8 -left-8 h-28 w-28 rounded-full bg-violet-500/20 blur-2xl" />
-                <p className="relative text-sm text-slate-200">
-                  Slide-style showcase. Click to open credential.
-                </p>
-                <div className="relative mt-6 inline-flex items-center gap-2 text-sm text-white">
-                  View certificate
-                  <ExternalLink size={15} className="transition group-hover:translate-x-0.5" />
-                </div>
-              </div>
-            </motion.a>
-          </AnimatePresence>
-          <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
-            <motion.div
-              key={activeCert}
-              initial={{ width: "0%" }}
-              animate={{ width: "100%" }}
-              transition={{ duration: 3.5, ease: "linear" }}
-              className="h-full rounded-full bg-gradient-to-r from-cyan-300 to-violet-400"
-            />
-          </div>
-          <div className="mt-4 flex gap-2">
-            {certifications.map((item, idx) => (
-              <button
-                key={item.title}
-                type="button"
-                aria-label={`Go to ${item.title}`}
-                onClick={() => setActiveCert(idx)}
-                className={`h-1.5 rounded-full transition-all ${
-                  idx === activeCert ? "w-8 bg-cyan-300" : "w-3 bg-white/25"
-                }`}
-              />
-            ))}
-          </div>
-        </motion.div>
-      </section>
+      <CertificateDeck certifications={certifications} />
 
       <section className="snap-section mx-auto max-w-6xl px-5 py-10 md:px-8">
         <motion.div
