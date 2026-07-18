@@ -40,7 +40,7 @@ const projects = [
     solution:
       "Shipped a React/TypeScript storefront with Supabase (PostgreSQL, Auth, Storage, Edge Functions), role-based admin, RLS, and bKash checkout with server-side price validation.",
     outcome:
-      "Generated 25 cold-market sales in 4 days (60% net margin) and achieved a 20% repeat-purchase rate within 72 hours."
+      "Delivered a live production storefront with secure payments, role-based admin, and measurable early customer traction."
   },
   {
     title: "KAIRO — Job Monitoring SaaS",
@@ -166,7 +166,7 @@ const timeline = [
     period: "Now",
     detail: "Expected graduation Oct 2026. Open to full-time software engineering roles.",
     phase:
-      "Shipping production full-stack products and preparing for roles in software engineering, secure systems, and AI-assisted development.",
+      "Shipping production full-stack products and preparing for roles in software engineering, secure systems, and data-driven applications.",
     highlight: true
   },
   {
@@ -234,7 +234,7 @@ export default function Home() {
     {
       question: "What technologies do you use?",
       answer:
-        "I work with React, TypeScript, Next.js, Python, PostgreSQL/Supabase, Django, C++, and Arduino. I also use AI tools to accelerate coding and technical audits."
+        "I work with React, TypeScript, Next.js, Python, PostgreSQL/Supabase, Django, C++, and Arduino — choosing tools based on the problem."
     },
     {
       question: "Are you available for work?",
@@ -413,13 +413,12 @@ export default function Home() {
                 </p>
                 <p>
                   My experience spans cryptography and zero-trust design — including Fiducia Bank —
-                  real-time control systems on Arduino, and AI-assisted development workflows with
-                  Claude, DeepSeek, ChatGPT, Gemini, and Perplexity.
+                  real-time embedded systems on Arduino, and shipping production software with strong
+                  ownership from architecture through deployment.
                 </p>
                 <p>
-                  I also run day-to-day operations for an online food and apparel business, and as
-                  founder of Shoukhin Lifestyle I own product, engineering, and go-to-market end to
-                  end.
+                  As founder of Shoukhin Lifestyle I own product, engineering, and operations end to
+                  end, and I bring the same reliability to team environments.
                 </p>
               </div>
             </motion.div>
@@ -485,7 +484,7 @@ export default function Home() {
           {[
             { icon: Code2, title: "Languages & Frameworks", text: "Python, C++, TypeScript, JavaScript, SQL, PHP, Bash · React, Next.js, Django, TensorFlow, Keras." },
             { icon: Database, title: "Backend & Data", text: "PostgreSQL, MySQL, Supabase, REST APIs, authentication, and Row-Level Security (RLS)." },
-            { icon: BriefcaseBusiness, title: "Systems & Tools", text: "Git, Linux, Arduino, embedded systems, Vercel, DSA, and AI-assisted development workflows." }
+            { icon: BriefcaseBusiness, title: "Systems & Tools", text: "Git, Linux, Arduino, embedded systems, Vercel, and strong fundamentals in data structures & algorithms." }
           ].map((item, idx) => (
             <motion.article
               key={item.title}
@@ -844,7 +843,7 @@ export default function Home() {
               "Secure Systems",
               "Backend / APIs",
               "Embedded Software",
-              "AI-Assisted Development"
+              "Data / ML"
             ].map((role) => (
               <span
                 key={role}
@@ -863,12 +862,20 @@ export default function Home() {
               View Resume Online
             </a>
             <a
-              href="/resume_Ridhwanur_Rahman_Khan.pdf"
-              download="resume_Ridhwanur_Rahman_Khan.pdf"
+              href="/CV_Ridhwanur_Rahman_Khan.pdf"
+              download="CV_Ridhwanur_Rahman_Khan.pdf"
               className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-slate-900 transition hover:-translate-y-0.5"
             >
               <Download size={15} />
-              Download PDF
+              Download CV
+            </a>
+            <a
+              href="/CVi_Ridhwanur_Rahman_Khan.pdf"
+              download="CVi_Ridhwanur_Rahman_Khan.pdf"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.03] px-5 py-2.5 text-sm text-white transition hover:-translate-y-0.5 hover:bg-white/10"
+            >
+              <Download size={15} />
+              Internship CV
             </a>
             <a
               href="mailto:ridhwankhan03@gmail.com"
