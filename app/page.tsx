@@ -56,17 +56,18 @@ const projects = [
       "Deployed a production SaaS on Vercel that monitors listings and supports ongoing user and account moderation."
   },
   {
-    title: "ZERO Trust Banking System",
-    stack: ["Django", "React", "Cryptography"],
+    title: "Fiducia Bank — Zero-Trust Banking",
+    stack: ["Django", "React", "Cryptography", "JWT", "2FA"],
     link: "https://github.com/ridhwankhan/ZERO-trust-Banking-system",
-    liveLink: null,
-    statement: "Financial prototypes need stronger trust boundaries without slowing down user actions.",
+    liveLink: "https://fiducia-bank.vercel.app/",
+    statement:
+      "High-stakes financial systems need layered encryption, role-aware controls, and integrity checks — not just a login wall.",
     problem:
-      "Traditional security layers were not enough for sensitive financial workflows and simulated transactions.",
+      "Traditional banking prototypes leave sessions, stored data, and transactions under-protected for real security demos and compliance workflows.",
     solution:
-      "Built a secure banking prototype with role-based access control, RSA/ECC cryptography, and zero-trust design.",
+      "Built Fiducia Bank as a zero-trust encrypted banking platform: hardened JWT sessions with optional 2FA, encrypted data at rest, HMAC-backed transaction verification, and Admin/Authority workspaces for KYC and monitoring. Showcased at the NSU Cybersecurity Inauguration.",
     outcome:
-      "Demonstrated safer financial operations with cryptography-backed identity checks at every step."
+      "Shipped a live demo at fiducia-bank.vercel.app that models production-grade secure storage, audit-ready crypto checks, and role-aware authorization paths."
   },
   {
     title: "Quadcopter Flight Controller",
@@ -170,10 +171,11 @@ const timeline = [
   },
   {
     title: "Multimodal Thesis Defended",
-    period: "Thesis",
-    detail: "Defended multimodal thesis with 98% marks.",
+    period: "Thesis · 98%",
+    detail:
+      "Defended multimodal ML thesis for agricultural land management with 98% marks.",
     phase:
-      "Completed and defended a multimodal research thesis at a high academic standard, strengthening research and presentation skills."
+      "Fused satellite NDVI, Sentinel-1 radar, climate, and soil chemistry across seven Bangladeshi districts to predict Aman rice and Wheat yields. Ensemble models (Random Forest, XGBoost) beat linear baselines (cross-validated R² above ~0.85), targeting climate-adaptive Agriculture 5.0 decision support."
   },
   {
     title: "Founded Shoukhin Lifestyle",
@@ -189,10 +191,12 @@ const timeline = [
     phase: "Owned architecture, build, testing, and admin governance for a live SaaS."
   },
   {
-    title: "Built Secure & Embedded Systems",
+    title: "Built Fiducia Bank & Embedded Systems",
     period: "Hands-on Phase",
-    detail: "Shipped ZERO Trust banking and a custom Arduino flight controller with real-time control.",
-    phase: "Grew into cryptography, RBAC, and embedded C++ through end-to-end ownership."
+    detail:
+      "Shipped Fiducia Bank (zero-trust encrypted banking, live on Vercel) and a custom Arduino flight controller.",
+    phase:
+      "Grew into JWT/2FA sessions, encrypted-at-rest fields, HMAC integrity checks, RBAC, and embedded C++ through end-to-end ownership."
   },
   {
     title: "Operations Associate",
@@ -408,9 +412,9 @@ export default function Home() {
                   bKash payments, and KAIRO, a live job-monitoring SaaS.
                 </p>
                 <p>
-                  My experience spans cryptography and zero-trust design, real-time control systems
-                  on Arduino, and AI-assisted development workflows with Claude, DeepSeek, ChatGPT,
-                  Gemini, and Perplexity.
+                  My experience spans cryptography and zero-trust design — including Fiducia Bank —
+                  real-time control systems on Arduino, and AI-assisted development workflows with
+                  Claude, DeepSeek, ChatGPT, Gemini, and Perplexity.
                 </p>
                 <p>
                   I also run day-to-day operations for an online food and apparel business, and as
