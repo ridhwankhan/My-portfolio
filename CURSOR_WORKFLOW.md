@@ -24,7 +24,7 @@ Only proceed to the next prompt after both commands pass.
 
 - Graduation target: October 2026
 - CGPA: 3.47
-- Availability: Open to Work
+- Availability: From October 1, 2026
 - Focus areas: Full-stack software engineering, secure systems, embedded software, AI-assisted development
 
 If there is any conflict between website content and `resume_Ridhwanur_Rahman_Khan.pdf`, update the website to match the resume unless the user explicitly overrides it.

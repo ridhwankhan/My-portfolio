@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: `%s | ${FULL_NAME}`
   },
   description:
-    "Official portfolio of Ridhwanur Rahman Khan (Ridhwan Khan) — Computer Science undergraduate at BRAC University (CGPA 3.47; expected Oct 2026). Building production full-stack web apps, secure systems, and embedded software. Open to full-time software engineering roles.",
+    "Official portfolio of Ridhwanur Rahman Khan (Ridhwan Khan) — Computer Science undergraduate at BRAC University (CGPA 3.47; graduating Oct 2026). Building production full-stack web apps, secure systems, and embedded software. Available for full-time roles from October 1, 2026.",
   keywords: [
     "Ridhwan",
     "Ridhwan Khan",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: `${FULL_NAME} — Portfolio`,
     title: `${FULL_NAME} | Full-Stack Software Engineering`,
     description:
-      `${FULL_NAME} (${SHORT_NAME}) — CS undergraduate at BRAC University (CGPA 3.47; expected Oct 2026). Open to full-stack software engineering, secure systems, and embedded roles.`,
+      `${FULL_NAME} (${SHORT_NAME}) — CS undergraduate at BRAC University (CGPA 3.47; graduating Oct 2026). Available for full-stack software engineering, secure systems, and embedded roles from October 1, 2026.`,
     images: [
       {
         url: "/og-image.jpg",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${FULL_NAME} | Portfolio`,
     description:
-      "CS undergraduate (expected Oct 2026) building production full-stack apps, secure systems, and embedded software.",
+      "CS undergraduate graduating Oct 2026 — available for full-time roles from October 1, 2026.",
     images: ["/og-image.jpg"]
   },
   verification: {

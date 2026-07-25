@@ -69,7 +69,7 @@ export default function ResumePage() {
                 Ridhwanur Rahman Khan
               </h1>
               <p className="mt-0.5 text-xs text-slate-400">
-                Resume · Expected graduation Oct 2026 · Open to Work
+                Resume · Graduating Oct 2026 · Available from Oct 1, 2026
               </p>
             </div>
             <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-300/35 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-100">
@@ -77,7 +77,7 @@ export default function ResumePage() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
               </span>
-              Open to Work
+              Available Oct 1
             </span>
           </div>
 

@@ -164,7 +164,7 @@ const timeline = [
   {
     title: "Final Year (Current)",
     period: "Now",
-    detail: "Expected graduation Oct 2026. Open to full-time software engineering roles.",
+    detail: "Graduating Oct 2026. Available for full-time roles from October 1, 2026.",
     phase:
       "Shipping production full-stack products and preparing for roles in software engineering, secure systems, and AI-assisted development.",
     highlight: true
@@ -239,7 +239,7 @@ export default function Home() {
     {
       question: "Are you available for work?",
       answer:
-        "Yes. I graduate from BRAC University in October 2026 (CGPA 3.47) and am open to full-time software engineering roles."
+        "Yes. I graduate in October 2026 (CGPA 3.47) and am available for full-time roles from October 1, 2026."
     }
   ];
 
@@ -317,7 +317,7 @@ export default function Home() {
             className="mx-auto inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-xs text-cyan-200"
           >
             <Sparkles size={14} />
-            Open to work · Graduating Oct 2026
+            Available from Oct 1, 2026 · Graduating October 2026
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
@@ -832,10 +832,10 @@ export default function Home() {
             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
             className="relative mx-auto inline-flex rounded-full border border-cyan-200/35 bg-cyan-400/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-cyan-100"
           >
-            Open to Work
+            Available Oct 1
           </motion.span>
           <h3 className="relative mt-4 text-2xl font-semibold text-white md:text-3xl">
-            Open to full-time roles · Graduating Oct 2026
+            Available for full-time roles from October 1, 2026
           </h3>
           <div className="relative mt-5 flex flex-wrap justify-center gap-2">
             {[
