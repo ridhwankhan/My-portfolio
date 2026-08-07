@@ -67,7 +67,7 @@ export default function ResumePage() {
                 Ridhwanur Rahman Khan
               </h1>
               <p className="mt-0.5 text-xs text-slate-400">
-                Generic Resume · Graduating October 2026
+                Generic Resume · BRAC University
               </p>
             </div>
           </div>

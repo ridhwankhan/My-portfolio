@@ -164,7 +164,7 @@ const timeline = [
   {
     title: "Final Year (Current)",
     period: "Now",
-    detail: "Graduating October 2026. Computer Science at BRAC University.",
+    detail: "Computer Science at BRAC University.",
     phase:
       "Shipping production full-stack products and preparing for roles in software engineering, secure systems, and AI-assisted development.",
     highlight: true
@@ -317,7 +317,7 @@ export default function Home() {
             className="mx-auto inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-xs text-cyan-200"
           >
             <Sparkles size={14} />
-            Computer Science · Graduating October 2026
+            Computer Science · BRAC University
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
@@ -355,9 +355,8 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-300 md:text-lg"
           >
-            RIDHWANUR RAHMAN KHAN — Computer Science undergraduate at BRAC University (CGPA
-            3.47; expected Oct 2026). Building production full-stack apps, secure systems, and
-            embedded software.
+            RIDHWANUR RAHMAN KHAN — Computer Science undergraduate at BRAC University.
+            Building production full-stack apps, secure systems, and embedded software.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -402,9 +401,8 @@ export default function Home() {
               <h2 className="text-2xl font-semibold md:text-3xl">About Me</h2>
               <div className="mt-5 space-y-4 text-slate-300">
                 <p>
-                  I am a Computer Science undergraduate at BRAC University (CGPA 3.47; expected
-                  Oct 2026) building production full-stack web apps, secure systems, and embedded
-                  software.
+                  I am a Computer Science undergraduate at BRAC University building production
+                  full-stack web apps, secure systems, and embedded software.
                 </p>
                 <p>
                   I have shipped live products with React, TypeScript, Next.js, Python, and
