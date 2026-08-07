@@ -164,7 +164,7 @@ const timeline = [
   {
     title: "Final Year (Current)",
     period: "Now",
-    detail: "Graduating Oct 2026. Available for full-time roles from October 1, 2026.",
+    detail: "Graduating October 2026. Computer Science at BRAC University.",
     phase:
       "Shipping production full-stack products and preparing for roles in software engineering, secure systems, and AI-assisted development.",
     highlight: true
@@ -237,9 +237,9 @@ export default function Home() {
         "I work with React, TypeScript, Next.js, Python, PostgreSQL/Supabase, Django, C++, and Arduino. I also use AI tools to accelerate coding and technical audits."
     },
     {
-      question: "Are you available for work?",
+      question: "What roles interest you?",
       answer:
-        "Yes. I graduate in October 2026 (CGPA 3.47) and am available for full-time roles from October 1, 2026."
+        "Software Engineering, Product Management, Management Trainee Officer (MTO), Data Science / Analytics, and Business Intelligence — plus related full-stack and operations tracks."
     }
   ];
 
@@ -317,7 +317,7 @@ export default function Home() {
             className="mx-auto inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-xs text-cyan-200"
           >
             <Sparkles size={14} />
-            Available from Oct 1, 2026 · Graduating October 2026
+            Computer Science · Graduating October 2026
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
@@ -373,7 +373,7 @@ export default function Home() {
               <ArrowRight size={16} className="transition group-hover:translate-x-1" />
             </a>
             <a
-              href="mailto:ridhwankhan03@gmail.com"
+              href="#contact"
               className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.04] px-6 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:bg-white/10"
             >
               <Mail size={16} /> Contact Me
@@ -832,19 +832,20 @@ export default function Home() {
             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
             className="relative mx-auto inline-flex rounded-full border border-cyan-200/35 bg-cyan-400/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-cyan-100"
           >
-            Available Oct 1
+            Key Roles
           </motion.span>
           <h3 className="relative mt-4 text-2xl font-semibold text-white md:text-3xl">
-            Available for full-time roles from October 1, 2026
+            Roles I&apos;m targeting
           </h3>
           <div className="relative mt-5 flex flex-wrap justify-center gap-2">
             {[
-              "Software Engineering",
+              "Software Engineer",
+              "Product Management",
+              "Management Trainee Officer",
+              "Data Science / Analyst",
+              "Business Intelligence",
               "Full-Stack Development",
-              "Secure Systems",
-              "Backend / APIs",
-              "Embedded Software",
-              "AI-Assisted Development"
+              "Operations & Strategy"
             ].map((role) => (
               <span
                 key={role}
@@ -863,15 +864,15 @@ export default function Home() {
               View Resume Online
             </a>
             <a
-              href="/resume_Ridhwanur_Rahman_Khan.pdf"
-              download="resume_Ridhwanur_Rahman_Khan.pdf"
+              href="/Ridhwanur_Rahman_Khan_g.pdf"
+              download="Ridhwanur_Rahman_Khan_g.pdf"
               className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-slate-900 transition hover:-translate-y-0.5"
             >
               <Download size={15} />
               Download PDF
             </a>
             <a
-              href="mailto:ridhwankhan03@gmail.com"
+              href="#contact"
               className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.03] px-5 py-2.5 text-sm text-white transition hover:-translate-y-0.5 hover:bg-white/10"
             >
               <Mail size={15} />

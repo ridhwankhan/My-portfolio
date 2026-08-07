@@ -8,11 +8,11 @@ const SHORT_NAME = "Ridhwan Khan";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${FULL_NAME} | Portfolio — Full-Stack Software Engineering`,
+    default: `${FULL_NAME} | Portfolio — Software, Product & Data`,
     template: `%s | ${FULL_NAME}`
   },
   description:
-    "Official portfolio of Ridhwanur Rahman Khan (Ridhwan Khan) — Computer Science undergraduate at BRAC University (CGPA 3.47; graduating Oct 2026). Building production full-stack web apps, secure systems, and embedded software. Available for full-time roles from October 1, 2026.",
+    "Official portfolio of Ridhwanur Rahman Khan (Ridhwan Khan) — Computer Science undergraduate at BRAC University (CGPA 3.47; graduating Oct 2026). Interested in Software Engineering, Product Management, Management Trainee Officer, Data Science/Analytics, and Business Intelligence roles.",
   keywords: [
     "Ridhwan",
     "Ridhwan Khan",
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: `${FULL_NAME} — Portfolio`,
-    title: `${FULL_NAME} | Full-Stack Software Engineering`,
+    title: `${FULL_NAME} | Software, Product & Data`,
     description:
-      `${FULL_NAME} (${SHORT_NAME}) — CS undergraduate at BRAC University (CGPA 3.47; graduating Oct 2026). Available for full-stack software engineering, secure systems, and embedded roles from October 1, 2026.`,
+      `${FULL_NAME} (${SHORT_NAME}) — CS undergraduate at BRAC University (CGPA 3.47; graduating Oct 2026). Targeting Software Engineering, Product Management, MTO, Data Science/Analytics, and Business Intelligence.`,
     images: [
       {
         url: "/og-image.jpg",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${FULL_NAME} | Portfolio`,
     description:
-      "CS undergraduate graduating Oct 2026 — available for full-time roles from October 1, 2026.",
+      "CS undergraduate graduating Oct 2026 — Software Engineering, Product Management, MTO, Data Science & Business Intelligence.",
     images: ["/og-image.jpg"]
   },
   verification: {
