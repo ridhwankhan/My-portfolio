@@ -10,6 +10,7 @@ import {
   Database,
   Download,
   ExternalLink,
+  FileText,
   MessageCircleQuestion,
   Github,
   GraduationCap,
@@ -30,6 +31,25 @@ const navItems = [
 
 const projects = [
   {
+    title: "Multimodal ML for Sustainable Crop Decision Support",
+    stack: ["Research", "CNN", "XGBoost", "Remote Sensing", "Streamlit"],
+    link: null,
+    liveLink: null,
+    statement:
+      "Bangladesh agriculture needs multi-source decision support under climate volatility and soil degradation.",
+    problem:
+      "Paired image-yield datasets are scarce, and single-modality models struggle to turn soil imagery, satellite sensing, and climate history into local actionable advice.",
+    solution:
+      "Built a cascaded multimodal ML framework: EfficientNet-B0 classifies soil imagery (macro F1 0.870), XGBoost predicts Aman rice and Wheat yields (R² 0.847 / 0.512 on temporal holdout), and decision-level fusion combines both under agronomic rules in a Streamlit GUI.",
+    outcome:
+      "Delivered a research thesis system for district-level soil classification and yield forecasting with stakeholder-facing decision support.",
+    abstract:
+      "Bangladesh's agriculture land management is facing unprecedented climate volatility and soil degradation, which are forcing Bangladesh to take multi-source data into account for proper decision making on a local basis. A cascaded multimodal machine learning approach has been proposed to classify soil conditions and predict Aman rice and Wheat yields at several districts. This study starts with the fusion of satellite, climate and historical yield data, and a preparation of a soil image manifest in balance. Two parallel machine learning pipelines are then trained. The raw imagery is classified into local soil types using a strong macro F1 score of 0.870 Convolutional Neural Network (EfficientNet-B0). XGBoost ensemble models are built for each crop to predict the yield of each crop. The yield models have a strong potential of prediction on a temporal holdout with an R² of 0.847 for Aman rice and 0.512 for Wheat. The key challenge is the scarcity of paired image-yield datasets. Thus, the system uses decision-level fusion (DLF) to readily integrate the CNN soil predictions with the XGBoost yield predictions, guided by agronomic rules. Last, this multimodal application is implemented using a Streamlit interactive GUI for actionable support to stakeholders' decision making.",
+    keywords:
+      "Multimodal machine learning, soil image classification, crop yield forecasting, decision-level fusion, Bangladesh agriculture, EfficientNet-B0, XGBoost, remote sensing",
+    researchPdf: "/Multimodal_ML_Crop_Decision_Support_Thesis.pdf"
+  },
+  {
     title: "Shoukhin E-Commerce Platform",
     stack: ["React", "TypeScript", "Supabase"],
     link: "https://github.com/ridhwankhan/soukhin",
@@ -40,7 +60,10 @@ const projects = [
     solution:
       "Shipped a React/TypeScript storefront with Supabase (PostgreSQL, Auth, Storage, Edge Functions), role-based admin, RLS, and bKash checkout with server-side price validation.",
     outcome:
-      "Generated 25 cold-market sales in 4 days (60% net margin) and achieved a 20% repeat-purchase rate within 72 hours."
+      "Delivered a live production storefront with secure payments, role-based admin, and measurable early customer traction.",
+    abstract: null,
+    keywords: null,
+    researchPdf: null
   },
   {
     title: "KAIRO — Job Monitoring SaaS",
@@ -53,7 +76,10 @@ const projects = [
     solution:
       "Launched a live SaaS for career-page monitoring and job alerts; owned requirements, architecture, build, testing, and production deployment with admin tools for user management and messaging.",
     outcome:
-      "Deployed a production SaaS on Vercel that monitors listings and supports ongoing user and account moderation."
+      "Deployed a production SaaS on Vercel that monitors listings and supports ongoing user and account moderation.",
+    abstract: null,
+    keywords: null,
+    researchPdf: null
   },
   {
     title: "Fiducia Bank — Zero-Trust Banking",
@@ -67,7 +93,63 @@ const projects = [
     solution:
       "Built Fiducia Bank as a zero-trust encrypted banking platform: hardened JWT sessions with optional 2FA, encrypted data at rest, HMAC-backed transaction verification, and Admin/Authority workspaces for KYC and monitoring. Showcased at the NSU Cybersecurity Inauguration.",
     outcome:
-      "Shipped a live demo at fiducia-bank.vercel.app that models production-grade secure storage, audit-ready crypto checks, and role-aware authorization paths."
+      "Shipped a live demo at fiducia-bank.vercel.app that models production-grade secure storage, audit-ready crypto checks, and role-aware authorization paths.",
+    abstract: null,
+    keywords: null,
+    researchPdf: null
+  },
+  {
+    title: "Project Signal Sweep",
+    stack: ["Python", "OpenGL", "Bleak", "Bluetooth"],
+    link: "https://github.com/ridhwankhan/Project-Signal-Sweep",
+    liveLink: null,
+    statement:
+      "Nearby Bluetooth devices are hard to interpret without a clear spatial, real-time visualization.",
+    problem:
+      "Raw Bluetooth scans lack an intuitive interface for presence, signal strength, and device enter/leave events.",
+    solution:
+      "Built a Python + OpenGL CSE423 computer-graphics radar: real-time BLE scanning (Bleak), 3D radar sweep animation, theme modes (Green/Blue/Orange), play/pause and speed controls, and audio notifications for device detected/lost.",
+    outcome:
+      "Delivered an interactive radar application that maps nearby Bluetooth devices onto a live 3D sweep display with keyboard/mouse controls.",
+    abstract: null,
+    keywords: null,
+    researchPdf: null
+  },
+  {
+    title: "Meta-Visual Forensics — Deepfake & Image Manipulation Detection",
+    stack: ["Deep Learning", "CNN", "Metadata", "Computer Vision"],
+    link: null,
+    liveLink: null,
+    statement:
+      "Deepfake and image-tampering detection is weaker when models rely on visual cues alone.",
+    problem:
+      "Visual-only detectors miss metadata anomalies, and metadata-only models ignore visual manipulation artifacts common in social-media uploads.",
+    solution:
+      "Designed a hybrid CSE427 pipeline: CNN visual branch (ResNet/EfficientNet/MobileNet) + metadata MLP (EXIF fields), fused embeddings for real vs fake/tampered prediction, with Grad-CAM and SHAP-style explainability, FaceForensics++ / ExifForensics / Celeb-DF evaluation plans.",
+    outcome:
+      "Produced a forensic research plan and hybrid architecture for deepfake + manipulation detection that combines visual evidence with metadata integrity signals.",
+    abstract:
+      "CSE427 Meta-Visual Forensics detects deepfakes and image manipulations with a hybrid deep-learning design. Phase 1 prepares a hybrid dataset from FaceForensics++ (and optional Celeb-DF) visual frames plus EXIF metadata (camera model, software, timestamp, ISO, GPS, compression), synthesizing metadata anomalies for fake samples. Phase 2 builds a visual CNN branch (transfer learning) and a metadata MLP branch, then fuses embeddings (optional attention) into a binary classifier. Phase 3 trains the hybrid model against CNN-only and MLP-only baselines with cross-dataset checks. Phase 4 adds explainability via Grad-CAM/saliency for visuals and feature-importance/SHAP for metadata. Phase 5–6 cover robustness (JPEG/resize), metrics (Accuracy, F1, ROC-AUC), and paper-ready reporting. Novelty focuses on hybrid visual + metadata forensics rather than CNN-only detection.",
+    keywords:
+      "Deepfake detection, image forensics, hybrid CNN + metadata MLP, EXIF anomalies, Grad-CAM, FaceForensics++",
+    researchPdf: null
+  },
+  {
+    title: "Multi-Class Text Classification with Deep Learning",
+    stack: ["NLP", "TensorFlow", "Word2Vec", "LSTM", "GRU"],
+    link: "https://github.com/ridhwankhan/NLP-II-_project",
+    liveLink: null,
+    statement:
+      "Question-answer text needs reliable multi-class classification across classical ML and deep sequence models.",
+    problem:
+      "Choosing between TF-IDF baselines and embedding-based RNN variants is unclear without a controlled experimental pipeline.",
+    solution:
+      "Built a CSE440 NLP pipeline with EDA, cleaning/lemmatization, TF-IDF and Skip-gram Word2Vec representations, then compared Random Forest against DNN, RNN, GRU, LSTM, and bidirectional variants in TensorFlow/Keras.",
+    outcome:
+      "Delivered a complete notebook-driven comparison of traditional and deep architectures for multi-class text classification.",
+    abstract: null,
+    keywords: null,
+    researchPdf: null
   },
   {
     title: "Quadcopter Flight Controller",
@@ -80,7 +162,10 @@ const projects = [
     solution:
       "Engineered a custom flight controller with MPU-6050 IMU sensing, ESC motor control, PID stabilization, and a 250Hz real-time control loop.",
     outcome:
-      "Achieved smoother real-time stabilization and stronger hardware-software control integration."
+      "Achieved smoother real-time stabilization and stronger hardware-software control integration.",
+    abstract: null,
+    keywords: null,
+    researchPdf: null
   }
 ];
 
@@ -222,6 +307,7 @@ export default function Home() {
   const rotatingWords = ["full-stack apps", "secure systems", "embedded software"];
   const [activeWord, setActiveWord] = useState(0);
   const [selectedProject, setSelectedProject] = useState<(typeof projects)[number] | null>(null);
+  const [abstractProject, setAbstractProject] = useState<(typeof projects)[number] | null>(null);
   const [activeAsk, setActiveAsk] = useState<string | null>("What do you build?");
   const [showFullJourney, setShowFullJourney] = useState(false);
   const [expandedJourney, setExpandedJourney] = useState("Final Year (Current)");
@@ -563,6 +649,27 @@ export default function Home() {
                 <ArrowRight size={14} />
               </button>
               <div className="mt-3 flex flex-wrap gap-2">
+                {project.abstract && (
+                  <button
+                    type="button"
+                    onClick={() => setAbstractProject(project)}
+                    className="interactive-lift inline-flex items-center gap-2 rounded-full border border-violet-300/35 bg-violet-400/15 px-4 py-2 text-xs font-semibold text-violet-100 transition hover:bg-violet-400/25"
+                  >
+                    <FileText size={13} />
+                    Abstract
+                  </button>
+                )}
+                {project.researchPdf && (
+                  <a
+                    href={project.researchPdf}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="interactive-lift inline-flex items-center gap-2 rounded-full border border-amber-300/35 bg-amber-400/10 px-4 py-2 text-xs font-medium text-amber-100 transition hover:bg-amber-400/20"
+                  >
+                    Research PDF
+                    <ExternalLink size={13} />
+                  </a>
+                )}
                 {project.liveLink && (
                   <a
                     href={project.liveLink}
@@ -642,6 +749,30 @@ export default function Home() {
                 </p>
               </div>
               <div className="mt-7 flex flex-wrap gap-3">
+                {selectedProject.abstract && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setAbstractProject(selectedProject);
+                      setSelectedProject(null);
+                    }}
+                    className="inline-flex items-center gap-2 rounded-full border border-violet-300/35 bg-violet-400/15 px-5 py-2.5 text-sm font-semibold text-violet-100 transition hover:bg-violet-400/25"
+                  >
+                    <FileText size={14} />
+                    Abstract
+                  </button>
+                )}
+                {selectedProject.researchPdf && (
+                  <a
+                    href={selectedProject.researchPdf}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-amber-300/35 bg-amber-400/10 px-5 py-2.5 text-sm text-amber-100 transition hover:bg-amber-400/20"
+                  >
+                    Research PDF
+                    <ExternalLink size={14} />
+                  </a>
+                )}
                 {selectedProject.liveLink && (
                   <a
                     href={selectedProject.liveLink}
@@ -671,6 +802,71 @@ export default function Home() {
                 <button
                   type="button"
                   onClick={() => setSelectedProject(null)}
+                  className="inline-flex rounded-full border border-white/20 px-4 py-2 text-xs text-white transition hover:bg-white/10"
+                >
+                  Close
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {abstractProject && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[70] flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-sm"
+            onClick={() => setAbstractProject(null)}
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 24, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 18, scale: 0.98 }}
+              transition={{ duration: 0.25 }}
+              onClick={(event) => event.stopPropagation()}
+              className="glass relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-3xl p-7 md:p-8"
+            >
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-violet-200/80">
+                Abstract
+              </p>
+              <h3 className="mt-2 text-xl font-semibold text-white md:text-2xl">
+                {abstractProject.title}
+              </h3>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {abstractProject.stack.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-white/15 px-3 py-1 text-xs text-slate-200"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-6 text-sm leading-7 text-slate-300">{abstractProject.abstract}</p>
+              {abstractProject.keywords && (
+                <p className="mt-5 rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-xs leading-6 text-slate-400">
+                  <span className="font-medium text-slate-200">Keywords: </span>
+                  {abstractProject.keywords}
+                </p>
+              )}
+              <div className="mt-7 flex flex-wrap gap-3">
+                {abstractProject.researchPdf && (
+                  <a
+                    href={abstractProject.researchPdf}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-amber-300/35 bg-amber-400/10 px-5 py-2.5 text-sm text-amber-100 transition hover:bg-amber-400/20"
+                  >
+                    Open Research PDF
+                    <ExternalLink size={14} />
+                  </a>
+                )}
+                <button
+                  type="button"
+                  onClick={() => setAbstractProject(null)}
                   className="inline-flex rounded-full border border-white/20 px-4 py-2 text-xs text-white transition hover:bg-white/10"
                 >
                   Close
