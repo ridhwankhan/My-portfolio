@@ -36,18 +36,18 @@ const projects = [
     link: null,
     liveLink: null,
     statement:
-      "Bangladesh agriculture needs multi-source decision support under climate volatility and soil degradation.",
+      "Defended thesis (98% marks) — multimodal ML for soil classification and crop yield decision support in Bangladesh.",
     problem:
       "Paired image-yield datasets are scarce, and single-modality models struggle to turn soil imagery, satellite sensing, and climate history into local actionable advice.",
     solution:
       "Built a cascaded multimodal ML framework: EfficientNet-B0 classifies soil imagery (macro F1 0.870), XGBoost predicts Aman rice and Wheat yields (R² 0.847 / 0.512 on temporal holdout), and decision-level fusion combines both under agronomic rules in a Streamlit GUI.",
     outcome:
-      "Delivered a research thesis system for district-level soil classification and yield forecasting with stakeholder-facing decision support.",
+      "Successfully defended the undergraduate thesis with 98% marks, delivering a multimodal system for district-level soil classification and yield forecasting.",
     abstract:
       "Bangladesh's agriculture land management is facing unprecedented climate volatility and soil degradation, which are forcing Bangladesh to take multi-source data into account for proper decision making on a local basis. A cascaded multimodal machine learning approach has been proposed to classify soil conditions and predict Aman rice and Wheat yields at several districts. This study starts with the fusion of satellite, climate and historical yield data, and a preparation of a soil image manifest in balance. Two parallel machine learning pipelines are then trained. The raw imagery is classified into local soil types using a strong macro F1 score of 0.870 Convolutional Neural Network (EfficientNet-B0). XGBoost ensemble models are built for each crop to predict the yield of each crop. The yield models have a strong potential of prediction on a temporal holdout with an R² of 0.847 for Aman rice and 0.512 for Wheat. The key challenge is the scarcity of paired image-yield datasets. Thus, the system uses decision-level fusion (DLF) to readily integrate the CNN soil predictions with the XGBoost yield predictions, guided by agronomic rules. Last, this multimodal application is implemented using a Streamlit interactive GUI for actionable support to stakeholders' decision making.",
     keywords:
       "Multimodal machine learning, soil image classification, crop yield forecasting, decision-level fusion, Bangladesh agriculture, EfficientNet-B0, XGBoost, remote sensing",
-    researchPdf: "/Multimodal_ML_Crop_Decision_Support_Thesis.pdf"
+    researchPdf: null
   },
   {
     title: "Shoukhin E-Commerce Platform",
