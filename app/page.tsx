@@ -323,9 +323,9 @@ export default function Home() {
         "Clear thinking, accountability, teamwork, and a mix of analytics (ML, predictive modeling) with real operational work: order handling, customer follow-up, and multi-role admin workflows."
     },
     {
-      question: "What roles interest you?",
+      question: "How do you like to work?",
       answer:
-        "Management Trainee Officer (MTO), Product Management, Operations & Strategy, Business Intelligence, Data Science / Analyst, and Software Engineering roles where ownership and learning matter."
+        "I do best in environments that value ownership, clear thinking, teamwork, and continuous learning — whether the work is operational, analytical, or product-focused."
     }
   ];
 
@@ -1026,28 +1026,14 @@ export default function Home() {
             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
             className="relative mx-auto inline-flex rounded-full border border-cyan-200/35 bg-cyan-400/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-cyan-100"
           >
-            Key Roles
+            Resume
           </motion.span>
           <h3 className="relative mt-4 text-2xl font-semibold text-white md:text-3xl">
-            Roles I&apos;m targeting
+            See the full profile
           </h3>
-          <div className="relative mt-5 flex flex-wrap justify-center gap-2">
-            {[
-              "Management Trainee Officer",
-              "Product Management",
-              "Operations & Strategy",
-              "Business Intelligence",
-              "Data Science / Analyst",
-              "Software Engineer"
-            ].map((role) => (
-              <span
-                key={role}
-                className="rounded-full border border-white/15 bg-white/[0.04] px-3 py-1 text-xs text-slate-100"
-              >
-                {role}
-              </span>
-            ))}
-          </div>
+          <p className="relative mx-auto mt-3 max-w-xl text-sm text-slate-300">
+            View or download the Business &amp; Leadership CV, or jump to contact details below.
+          </p>
           <div className="relative mt-7 flex flex-wrap items-center justify-center gap-3">
             <a
               href="/resume"
@@ -1142,8 +1128,8 @@ export default function Home() {
         >
           <h2 className="text-2xl font-semibold md:text-3xl">Let&apos;s Build Something Impactful</h2>
           <p className="mt-4 max-w-2xl text-slate-300">
-            If you&apos;re hiring for MTO, product, operations, business intelligence, data, or
-            software roles, I&apos;d love to connect and discuss how I can contribute.
+            If you&apos;re hiring and looking for someone who owns outcomes and learns fast,
+            I&apos;d love to connect and discuss how I can contribute.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
