@@ -171,6 +171,14 @@ const projects = [
 
 const certifications = [
   {
+    title: "Foundations of Business Strategy",
+    provider: "University of Virginia",
+    description: "Core strategy frameworks from Darden School of Business via Coursera.",
+    link: "https://coursera.org/verify/3JZEZRXD8O2X",
+    image: "/certifications/uva-foundations-business-strategy.jpeg",
+    date: "Aug 2026"
+  },
+  {
     title: "Data Visualization and Dashboards with Excel and Cognos",
     provider: "IBM",
     description: "Building dashboards and business-friendly data stories.",
