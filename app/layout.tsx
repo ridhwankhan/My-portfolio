@@ -8,11 +8,11 @@ const SHORT_NAME = "Ridhwan Khan";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${FULL_NAME} | Portfolio — Software, Product & Data`,
+    default: `${FULL_NAME} | Portfolio — Business, Operations & Leadership`,
     template: `%s | ${FULL_NAME}`
   },
   description:
-    "Official portfolio of Ridhwanur Rahman Khan (Ridhwan Khan) — Computer Science undergraduate at BRAC University. Interested in Software Engineering, Product Management, Management Trainee Officer, Data Science/Analytics, and Business Intelligence roles.",
+    "Official portfolio of Ridhwanur Rahman Khan (Ridhwan Khan) — Computer Science graduate focused on business, operations, and management-trainee roles. Targeting MTO, Product Management, Business Intelligence, Data Analytics, and Software Engineering.",
   keywords: [
     "Ridhwan",
     "Ridhwan Khan",
@@ -20,16 +20,18 @@ export const metadata: Metadata = {
     "Ridhwanur Khan",
     "ridhwan khan portfolio",
     "ridhwan brac university",
-    "ridhwan software engineer",
-    "ridhwan full stack",
+    "ridhwan MTO",
+    "ridhwan business",
+    "ridhwan operations",
+    "ridhwan product management",
+    "ridhwan business intelligence",
+    "ridhwan data analyst",
     "Ridhwanur Rahman Khan portfolio",
     "ridhwan khan bangladesh",
     "ridhwan khan dhaka",
-    "ridhwan next.js",
-    "ridhwan react typescript",
     "Shoukhin",
     "KAIRO",
-    "BRAC University computer science 2026"
+    "BRAC University computer science"
   ],
   authors: [{ name: FULL_NAME, url: SITE_URL }],
   creator: FULL_NAME,
@@ -54,9 +56,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: `${FULL_NAME} — Portfolio`,
-    title: `${FULL_NAME} | Software, Product & Data`,
+    title: `${FULL_NAME} | Business, Operations & Leadership`,
     description:
-      `${FULL_NAME} (${SHORT_NAME}) — CS undergraduate at BRAC University. Targeting Software Engineering, Product Management, MTO, Data Science/Analytics, and Business Intelligence.`,
+      `${FULL_NAME} (${SHORT_NAME}) — CS graduate targeting MTO, Product Management, Operations, Business Intelligence, Data Analytics, and Software Engineering.`,
     images: [
       {
         url: "/og-image.jpg",
@@ -70,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${FULL_NAME} | Portfolio`,
     description:
-      "CS undergraduate at BRAC University — Software Engineering, Product Management, MTO, Data Science & Business Intelligence.",
+      "CS graduate — MTO, Product Management, Operations, Business Intelligence & Data Analytics.",
     images: ["/og-image.jpg"]
   },
   verification: {
@@ -100,7 +102,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               alternateName: ["Ridhwan Khan", "Ridhwan", "Ridhwanur Khan"],
               url: SITE_URL,
               image: `${SITE_URL}/my_hero.jpeg`,
-              jobTitle: "Computer Science Undergraduate · Full-Stack Software Engineering",
+              jobTitle: "Business & Leadership Candidate · Computer Science Graduate",
               alumniOf: {
                 "@type": "CollegeOrUniversity",
                 name: "BRAC University",
@@ -118,16 +120,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 SITE_URL
               ],
               knowsAbout: [
-                "Software Engineering",
-                "Full-Stack Development",
-                "React",
-                "TypeScript",
-                "Next.js",
+                "Business Operations",
+                "Management Trainee Programs",
+                "Product Management",
+                "Business Intelligence",
+                "Data Analytics",
+                "Machine Learning",
                 "Python",
-                "PostgreSQL",
-                "Supabase",
-                "Cryptography",
-                "Embedded Systems"
+                "SQL",
+                "Order Fulfillment"
               ]
             })
           }}

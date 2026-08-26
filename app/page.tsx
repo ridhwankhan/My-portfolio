@@ -304,28 +304,28 @@ const fadeUp = {
 };
 
 export default function Home() {
-  const rotatingWords = ["full-stack apps", "secure systems", "embedded software"];
+  const rotatingWords = ["business operations", "data-driven decisions", "leadership tracks"];
   const [activeWord, setActiveWord] = useState(0);
   const [selectedProject, setSelectedProject] = useState<(typeof projects)[number] | null>(null);
   const [abstractProject, setAbstractProject] = useState<(typeof projects)[number] | null>(null);
-  const [activeAsk, setActiveAsk] = useState<string | null>("What do you build?");
+  const [activeAsk, setActiveAsk] = useState<string | null>("What do you focus on?");
   const [showFullJourney, setShowFullJourney] = useState(false);
   const [expandedJourney, setExpandedJourney] = useState("Final Year (Current)");
   const askItems = [
     {
-      question: "What do you build?",
+      question: "What do you focus on?",
       answer:
-        "I build production full-stack web apps, secure systems, and embedded software — from e-commerce storefronts to real-time control systems."
+        "Business operations, ownership, and data-driven decision making — from family e-commerce fulfillment to live products like Shoukhin, KAIRO, and Fiducia Bank."
     },
     {
-      question: "What technologies do you use?",
+      question: "What strengths do you bring?",
       answer:
-        "I work with React, TypeScript, Next.js, Python, PostgreSQL/Supabase, Django, C++, and Arduino. I also use AI tools to accelerate coding and technical audits."
+        "Clear thinking, accountability, teamwork, and a mix of analytics (ML, predictive modeling) with real operational work: order handling, customer follow-up, and multi-role admin workflows."
     },
     {
       question: "What roles interest you?",
       answer:
-        "Software Engineering, Product Management, Management Trainee Officer (MTO), Data Science / Analytics, and Business Intelligence — plus related full-stack and operations tracks."
+        "Management Trainee Officer (MTO), Product Management, Operations & Strategy, Business Intelligence, Data Science / Analyst, and Software Engineering roles where ownership and learning matter."
     }
   ];
 
@@ -403,7 +403,7 @@ export default function Home() {
             className="mx-auto inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-xs text-cyan-200"
           >
             <Sparkles size={14} />
-            Computer Science · BRAC University
+            Computer Science · Business & Leadership
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
@@ -411,7 +411,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.15 }}
             className="mx-auto mt-6 max-w-4xl bg-gradient-to-r from-white via-slate-100 to-slate-500 bg-clip-text text-4xl font-semibold leading-tight text-transparent md:text-6xl"
           >
-            I build simple, intelligent software that solves real problems.
+            I bring ownership, clear thinking, and data-driven decisions to business problems.
           </motion.h1>
 
           <motion.div
@@ -441,8 +441,8 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-300 md:text-lg"
           >
-            RIDHWANUR RAHMAN KHAN — Computer Science undergraduate at BRAC University.
-            Building production full-stack apps, secure systems, and embedded software.
+            RIDHWANUR RAHMAN KHAN — Computer Science graduate focused on business, operations,
+            and management-trainee paths, with hands-on product and data experience.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -487,23 +487,23 @@ export default function Home() {
               <h2 className="text-2xl font-semibold md:text-3xl">About Me</h2>
               <div className="mt-5 space-y-4 text-slate-300">
                 <p>
-                  I am a Computer Science undergraduate at BRAC University building production
-                  full-stack web apps, secure systems, and embedded software.
+                  Motivated Computer Science graduate with a strong interest in business,
+                  operations, and management-trainee roles where clear thinking and ownership
+                  matter.
                 </p>
                 <p>
-                  I have shipped live products with React, TypeScript, Next.js, Python, and
-                  PostgreSQL — including Shoukhin, a bilingual e-commerce storefront with secure
-                  bKash payments, and KAIRO, a live job-monitoring SaaS.
+                  I combine hands-on experience from family business support, peer study
+                  coordination, and campus club work with a solid base in data-driven decision
+                  making — including Machine Learning, predictive modeling, and real-world problem
+                  analysis.
                 </p>
                 <p>
-                  My experience spans cryptography and zero-trust design — including Fiducia Bank —
-                  real-time control systems on Arduino, and AI-assisted development workflows with
-                  Claude, DeepSeek, ChatGPT, Gemini, and Perplexity.
+                  Through Shoukhin, KAIRO, and Fiducia Bank I have owned live products end to end —
+                  from customer operations and admin workflows to secure digital systems.
                 </p>
                 <p>
-                  I also run day-to-day operations for an online food and apparel business, and as
-                  founder of Shoukhin Lifestyle I own product, engineering, and go-to-market end to
-                  end.
+                  I am keen to grow where accountability, teamwork, and continuous learning are
+                  valued.
                 </p>
               </div>
             </motion.div>
@@ -567,9 +567,9 @@ export default function Home() {
         </motion.h2>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           {[
-            { icon: Code2, title: "Languages & Frameworks", text: "Python, C++, TypeScript, JavaScript, SQL, PHP, Bash · React, Next.js, Django, TensorFlow, Keras." },
-            { icon: Database, title: "Backend & Data", text: "PostgreSQL, MySQL, Supabase, REST APIs, authentication, and Row-Level Security (RLS)." },
-            { icon: BriefcaseBusiness, title: "Systems & Tools", text: "Git, Linux, Arduino, embedded systems, Vercel, DSA, and AI-assisted development workflows." }
+            { icon: BriefcaseBusiness, title: "Business Support", text: "Order handling & fulfillment, customer follow-up, vendor coordination, peer study coordination, workshop logistics, multi-role admin workflows." },
+            { icon: Database, title: "Analytics & Decision Making", text: "Complex data handling, predictive modeling, algorithmic problem solving, real-world problem analysis, and critical thinking." },
+            { icon: Code2, title: "Modern Tech", text: "Machine Learning, Neural Networks, Deep Learning, NLP, TensorFlow, Keras, scikit-learn, pandas, NumPy, Python, SQL." }
           ].map((item, idx) => (
             <motion.article
               key={item.title}
@@ -1033,13 +1033,12 @@ export default function Home() {
           </h3>
           <div className="relative mt-5 flex flex-wrap justify-center gap-2">
             {[
-              "Software Engineer",
-              "Product Management",
               "Management Trainee Officer",
-              "Data Science / Analyst",
+              "Product Management",
+              "Operations & Strategy",
               "Business Intelligence",
-              "Full-Stack Development",
-              "Operations & Strategy"
+              "Data Science / Analyst",
+              "Software Engineer"
             ].map((role) => (
               <span
                 key={role}
@@ -1058,8 +1057,8 @@ export default function Home() {
               View Resume Online
             </a>
             <a
-              href="/Ridhwanur_Rahman_Khan_g.pdf"
-              download="Ridhwanur_Rahman_Khan_g.pdf"
+              href="/Ridhwanur_Rahman_Khan_bm.pdf"
+              download="Ridhwanur_Rahman_Khan_bm.pdf"
               className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-slate-900 transition hover:-translate-y-0.5"
             >
               <Download size={15} />
@@ -1143,8 +1142,8 @@ export default function Home() {
         >
           <h2 className="text-2xl font-semibold md:text-3xl">Let&apos;s Build Something Impactful</h2>
           <p className="mt-4 max-w-2xl text-slate-300">
-            If you&apos;re hiring for software engineering, AI/ML, or data roles, I&apos;d love to
-            connect and discuss how I can contribute.
+            If you&apos;re hiring for MTO, product, operations, business intelligence, data, or
+            software roles, I&apos;d love to connect and discuss how I can contribute.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a

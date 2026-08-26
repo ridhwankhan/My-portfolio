@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Download, ArrowLeft, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
-const RESUME_PDF = "/Ridhwanur_Rahman_Khan_g.pdf";
+const RESUME_PDF = "/Ridhwanur_Rahman_Khan_bm.pdf";
 
 export default function ResumePage() {
   return (
@@ -31,11 +31,11 @@ export default function ResumePage() {
 
           <div className="flex items-center gap-2">
             <span className="hidden text-xs text-slate-400 md:block">
-              Ridhwanur Rahman Khan — Resume
+              Ridhwanur Rahman Khan — Business CV
             </span>
             <a
               href={RESUME_PDF}
-              download="Ridhwanur_Rahman_Khan_g.pdf"
+              download="Ridhwanur_Rahman_Khan_bm.pdf"
               className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold text-slate-900 transition hover:-translate-y-0.5"
             >
               <Download size={13} />
@@ -67,7 +67,7 @@ export default function ResumePage() {
                 Ridhwanur Rahman Khan
               </h1>
               <p className="mt-0.5 text-xs text-slate-400">
-                Generic Resume · BRAC University
+                Business & Leadership CV · BRAC University
               </p>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function ResumePage() {
           <div className="overflow-hidden rounded-2xl border border-white/10 shadow-[0_0_60px_-20px_rgba(56,189,248,0.25)]">
             <iframe
               src={`${RESUME_PDF}#toolbar=1&navpanes=0&view=FitH`}
-              title="Ridhwanur Rahman Khan — Resume"
+              title="Ridhwanur Rahman Khan — Business CV"
               className="h-[82vh] w-full"
               style={{ background: "#1e293b" }}
             />
@@ -85,7 +85,7 @@ export default function ResumePage() {
             Use the toolbar above to zoom, navigate, or print · Or{" "}
             <a
               href={RESUME_PDF}
-              download="Ridhwanur_Rahman_Khan_g.pdf"
+              download="Ridhwanur_Rahman_Khan_bm.pdf"
               className="text-cyan-400 underline-offset-2 hover:underline"
             >
               download the PDF directly
